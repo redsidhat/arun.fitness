@@ -5,8 +5,8 @@ theme = 'papermod'
 
 [params.profileMode]
 enabled = true
-title = "Test"
-subtitle = "This is subtitle"
+title = "Ashan"
+subtitle = "All hail Ashaan"
 
   [[params.profileMode.buttons]]
   name = "Archive"
