@@ -1,6 +1,6 @@
 baseURL = 'https://terminalninja.github.io/arun.fitness/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Ashan the great'
 theme = 'papermod'
 
 [params.profileMode]
