@@ -11,7 +11,3 @@ subtitle = "This is subtitle"
   [[params.profileMode.buttons]]
   name = "Archive"
   url = "/archive"
-
-  [[params.profileMode.buttons]]
-  name = "Github"
-  url = "https://github.com/"
