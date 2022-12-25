@@ -1,4 +1,4 @@
-baseURL = '/'
+baseURL = 'https://terminalninja.github.io/arun.fitness/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'papermod'
