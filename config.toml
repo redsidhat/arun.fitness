@@ -11,3 +11,28 @@ subtitle = "All hail Ashaan"
   [[params.profileMode.buttons]]
   name = "Archive"
   url = "/archive"
+
+[permalinks]
+  post = "/:year/:month/:day/:slug"
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "feed"
+
+[outputFormats.JSON]
+  mediaType = "application/json"
+  baseName = "sitemap"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = false
+  style = "default"
+  tabWidth = 4
