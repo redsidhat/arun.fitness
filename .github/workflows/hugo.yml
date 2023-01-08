@@ -5,7 +5,8 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
-
+  pull_request:
+    types: [opened, closed]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -60,6 +61,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
+    if: github.event_name == 'pull_request' && github.event.action == 'opened'
 
   # Deployment job
   deploy:
@@ -72,3 +74,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
