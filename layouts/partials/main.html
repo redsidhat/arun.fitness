@@ -1,0 +1,33 @@
+{{define "main"}}
+  <main>
+    {{if .IsHome}}
+      {{/* This block will only be displayed on the home page */}}
+      <section class="hero">
+        <h1>Welcome to My Personal Training Website</h1>
+        <p>I'm a certified personal trainer with years of experience helping people reach their fitness goals. Whether you're looking to lose weight, build muscle, or improve your overall health, I can create a personalized training plan to help you achieve your goals. Let's get started!</p>
+        <p><a href="#services" class="btn btn-primary">Learn More</a></p>
+      </section>
+
+      <section class="services" id="services">
+        <h2>My Services</h2>
+        <ul>
+          <li>One-on-one personal training</li>
+          <li>Group training</li>
+          <li>Online training and coaching</li>
+          <li>Nutrition guidance</li>
+        </ul>
+      </section>
+
+      <section class="testimonials">
+        <h2>What My Clients Are Saying</h2>
+        {{/* This block will display a random testimonial from the list provided */}}
+        {{  := rand.OneOf (slice "Testimonial 1" "Testimonial 2" "Testimonial 3") }}
+        <blockquote>{{  }}</blockquote>
+      </section>
+    {{else}}
+      {{/* This block will be displayed on all other pages */}}
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    {{end}}
+  </main>
+{{end}}
