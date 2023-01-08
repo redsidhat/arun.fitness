@@ -61,7 +61,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
-    if: github.event_name == 'pull_request' && github.event.action == 'opened'
+    if: github.event_name == 'pull_request' && github.event.action == 'opened' && github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
 
   # Deployment job
   deploy:
